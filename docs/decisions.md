@@ -57,3 +57,18 @@ Each entry records an architectural or technical decision made during the projec
 **TRADEOFF:** None significant — deferring costs nothing since it's additive later.
 
 **FUTURE:** Design as a standalone feature once core portfolio (v1) is complete.
+
+## 2026-XX-XX — v1 Projects list changed: Math Adventures replaces TaskFlow
+
+**DECISION:** v1 Projects section showcases Math Adventures and Sari-Sari Store POS.
+TaskFlow is no longer part of this portfolio's v1 scope.
+
+**WHY:** Math Adventures and Sari-Sari Store POS are real, completed school projects.
+TaskFlow is a separate, ongoing learning project not ready to showcase yet.
+
+**ALTERNATIVES:** Include TaskFlow as a third project, or as a placeholder.
+
+**TRADEOFF:** None — showing only real, complete projects keeps the portfolio honest,
+consistent with the project's no-fabrication rule.
+
+**FUTURE:** TaskFlow can be added once it's in a presentable state.
