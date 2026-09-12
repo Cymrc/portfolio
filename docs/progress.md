@@ -81,3 +81,13 @@ Tracks what's actually built, in build order. Update after each feature.
 - Added conditional GitHub and Live Demo links
 - Added secure external-link attributes
 - Added responsive card styling and layout
+
+- [x] 8. Contact section
+
+### Feature 8 — Contact (done)
+
+- Added real email, GitHub, and LinkedIn links
+- Added `mailto:` email link
+- Added secure external links
+- Added responsive flex-wrap layout
+- Reused established section/container patterns
