@@ -1,8 +1,15 @@
+import useScrollReveal from "../../hooks/useScrollReveal";
+
 function Hero() {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
     <section
+      ref={ref}
       id="hero"
-      className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-stone-50 px-4 text-center sm:px-6 lg:px-8"
+      className={`relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-stone-50 px-4 text-center transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none sm:px-6 lg:px-8 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
     >
       {/* Subtle Warm Earthy Ambient Background Accents */}
       <div

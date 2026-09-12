@@ -1,9 +1,18 @@
 import { techStack } from "../../data/techStack";
 import SkillBadge from "../ui/Badge";
+import useScrollReveal from "../../hooks/useScrollReveal";
 
 function TechStack() {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section id="tech-stack" className="px-4 py-20">
+    <section
+      ref={ref}
+      id="tech-stack"
+      className={`px-4 py-20 transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+    >
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
         <h2 className="text-3xl font-bold text-stone-800">Tech Stack</h2>
 

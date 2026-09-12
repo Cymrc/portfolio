@@ -1,8 +1,19 @@
+import useScrollReveal from "../../hooks/useScrollReveal";
+
 function About() {
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section id="about" className="px-4 py-20">
+    <section
+      ref={ref}
+      id="about"
+      className={`px-4 py-20 transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+    >
       <div className="max-w-2xl mx-auto flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-stone-800">About Me</h2>
+
         <p className="text-base text-stone-600 leading-relaxed">
           I'm an IT student interested in building practical software and
           learning how applications work from frontend to backend. I'm currently
@@ -17,3 +28,4 @@ function About() {
 }
 
 export default About;
+  

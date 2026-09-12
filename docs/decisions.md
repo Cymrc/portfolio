@@ -72,3 +72,21 @@ TaskFlow is a separate, ongoing learning project not ready to showcase yet.
 consistent with the project's no-fabrication rule.
 
 **FUTURE:** TaskFlow can be added once it's in a presentable state.
+
+## 2026-XX-XX — Custom useScrollReveal hook, applied per-section (not extracted className helper)
+
+**DECISION:** Each section calls useScrollReveal() independently and duplicates
+its own reveal className logic, rather than sharing a helper function.
+
+**WHY:** The pattern is small (3 lines) and different sections may eventually
+need different animation behavior. Extracting a helper now would add an
+abstraction with little current benefit.
+
+**ALTERNATIVES:** A shared getRevealClasses(isVisible) helper function.
+
+**TRADEOFF:** If reveal styling stays identical across all sections long-term,
+this duplication becomes mild maintenance overhead (6 places to update instead
+of 1).
+
+**FUTURE:** Revisit if reveal styling needs to change everywhere at once and
+editing 6 files becomes genuinely annoying.

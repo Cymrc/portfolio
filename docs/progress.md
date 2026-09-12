@@ -91,3 +91,14 @@ Tracks what's actually built, in build order. Update after each feature.
 - Added secure external links
 - Added responsive flex-wrap layout
 - Reused established section/container patterns
+
+- [x] 9. Scroll reveal animation pass
+
+### Feature 10 — Scroll-reveal animations (done)
+
+- Custom `useScrollReveal` hook using IntersectionObserver, one-time reveal
+  (observer disconnects after first intersection)
+- Applied independently to all 6 sections (Hero, About, Skills, Tech Stack,
+  Projects, Contact)
+- `motion-reduce:` variants respect prefers-reduced-motion — content still
+  appears, just without the slide/fade transition

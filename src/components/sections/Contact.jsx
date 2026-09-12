@@ -1,10 +1,11 @@
 import { useState } from "react";
+import useScrollReveal from "../../hooks/useScrollReveal";
 
 function Contact() {
+  const { ref, isVisible } = useScrollReveal();
+
   const email = "alextulen21@gmail.com";
-
   const github = "https://github.com/Cymrc";
-
   const linkedin = "https://www.linkedin.com/in/alex-john-tulen-209043360/";
 
   const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
@@ -13,11 +14,9 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     setStatus("loading");
 
     const formData = new FormData(event.target);
-
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
 
     try {
@@ -28,9 +27,10 @@ function Contact() {
 
       const data = await response.json();
 
+      console.log(data);
+
       if (data.success) {
         setStatus("success");
-
         event.target.reset();
       } else {
         setStatus("error");
@@ -41,7 +41,13 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="px-4 py-20">
+    <section
+      ref={ref}
+      id="contact"
+      className={`px-4 py-20 transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      }`}
+    >
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
         <h2 className="text-3xl font-bold text-stone-800">Contact</h2>
 
