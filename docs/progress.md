@@ -69,3 +69,15 @@ Tracks what's actually built, in build order. Update after each feature.
 - Flat, uncategorized data-driven section (`data/techStack.js`)
 - Reuses the shared `Badge` component
 - Single-level `.map()`, contrasting with Skills' nested categories
+
+- [x] 7. Projects section
+
+### Feature 7 — Projects (done)
+
+- Added data-driven `projects.js` with two completed school projects
+- Created reusable `ProjectCard` component
+- Added optional project thumbnails
+- Added tech and feature list rendering
+- Added conditional GitHub and Live Demo links
+- Added secure external-link attributes
+- Added responsive card styling and layout
