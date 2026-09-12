@@ -1,5 +1,5 @@
 import { skills } from "../../data/skills";
-import SkillBadge from "../ui/SkillBadge";
+import Badge from "../ui/Badge";
 
 function Skills() {
   return (
@@ -15,7 +15,7 @@ function Skills() {
 
             <div className="flex flex-wrap gap-2">
               {categoryGroup.items.map((skill) => (
-                <SkillBadge key={skill.name} name={skill.name} />
+                <Badge key={skill.name} name={skill.name} />
               ))}
             </div>
           </div>

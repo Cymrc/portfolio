@@ -57,3 +57,15 @@ Tracks what's actually built, in build order. Update after each feature.
 - Added reusable SkillBadge component
 - Added responsive badge layout
 - Added proper heading hierarchy
+
+### Refactor — Rename SkillBadge to Badge
+
+- Renamed `SkillBadge.jsx` → `Badge.jsx` since the component is now shared
+  between Skills and Tech Stack, not skill-specific
+- No behavior change; component still takes a single `name` prop
+
+### Feature 6 — Tech Stack (done)
+
+- Flat, uncategorized data-driven section (`data/techStack.js`)
+- Reuses the shared `Badge` component
+- Single-level `.map()`, contrasting with Skills' nested categories
