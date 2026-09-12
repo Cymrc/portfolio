@@ -2,9 +2,22 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="flex min-h-[100dvh] flex-col items-center justify-center gap-6 bg-stone-50 px-4 text-center sm:px-6 lg:px-8"
+      className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden bg-stone-50 px-4 text-center sm:px-6 lg:px-8"
     >
-      <div className="flex max-w-2xl flex-col items-center gap-6">
+      {/* Subtle Warm Earthy Ambient Background Accents */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 select-none overflow-hidden"
+      >
+        {/* Top-Right Soft Amber Glow */}
+        <div className="absolute -top-32 -right-20 h-80 w-80 rounded-full bg-amber-100/40 blur-3xl sm:h-96 sm:w-96" />
+
+        {/* Bottom-Left Soft Stone Accent Glow */}
+        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-stone-200/50 blur-3xl sm:h-96 sm:w-96" />
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 flex max-w-2xl flex-col items-center gap-6">
         <h1 className="text-4xl font-bold tracking-tight text-stone-800 sm:text-5xl">
           Alex John L. Tulen
         </h1>
@@ -39,4 +52,3 @@ function Hero() {
 }
 
 export default Hero;
-
