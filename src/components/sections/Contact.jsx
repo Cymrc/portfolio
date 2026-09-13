@@ -5,7 +5,9 @@ function Contact() {
   const { ref, isVisible } = useScrollReveal();
 
   const email = "alextulen21@gmail.com";
+
   const github = "https://github.com/Cymrc";
+
   const linkedin = "https://www.linkedin.com/in/alex-john-tulen-209043360/";
 
   const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
@@ -14,9 +16,11 @@ function Contact() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     setStatus("loading");
 
     const formData = new FormData(event.target);
+
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
 
     try {
@@ -82,13 +86,25 @@ function Contact() {
           <div>
             <label htmlFor="name">Name</label>
 
-            <input id="name" name="name" type="text" required />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autoComplete="name"
+              required
+            />
           </div>
 
           <div>
             <label htmlFor="email">Email</label>
 
-            <input id="email" name="email" type="email" required />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              required
+            />
           </div>
 
           <div>
@@ -101,11 +117,13 @@ function Contact() {
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
 
-          {status === "success" && <p>Message sent!</p>}
+          <div aria-live="polite">
+            {status === "success" && <p>Message sent!</p>}
 
-          {status === "error" && (
-            <p>Something went wrong. Try emailing me directly instead.</p>
-          )}
+            {status === "error" && (
+              <p>Something went wrong. Try emailing me directly instead.</p>
+            )}
+          </div>
         </form>
       </div>
     </section>

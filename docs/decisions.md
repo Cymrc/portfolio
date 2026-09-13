@@ -90,3 +90,19 @@ of 1).
 
 **FUTURE:** Revisit if reveal styling needs to change everywhere at once and
 editing 6 files becomes genuinely annoying.
+
+## 2026-XX-XX — Feature #11 accessibility audit findings and fixes
+
+**DECISION:** Full manual audit conducted across responsive breakpoints and
+accessibility categories (heading hierarchy, keyboard nav, contrast, forms,
+semantic HTML). Two real issues found and fixed:
+1. Missing autocomplete attributes on Name/Email contact form fields
+2. Contact form success/error status not announced to screen readers
+
+**WHY:** Both are genuine accessibility gaps — autocomplete assists browser
+autofill and some assistive tech; status announcements ensure screen reader
+users know a form submission succeeded or failed without needing to visually
+scan the page.
+
+**FUTURE:** Re-run this audit checklist after any major new feature that adds
+interactive elements or new content.
