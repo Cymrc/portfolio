@@ -14,7 +14,7 @@ Tracks what's actually built, in build order. Update after each feature.
 - [x] 8. Navbar + Footer
 - [x] 9. Scroll reveal animation pass
 - [x] 10. Responsive + accessibility pass
-- [ ] 11. SEO basics
+- [x] 11. SEO basics
 - [ ] 12. Deploy
 
 **Future roadmap (post-v1):**
@@ -63,8 +63,7 @@ Tracks what's actually built, in build order. Update after each feature.
 
 ### Refactor — Rename SkillBadge to Badge
 
-- Renamed `SkillBadge.jsx` → `Badge.jsx` since the component is now shared
-  between Skills and Tech Stack, not skill-specific
+- Renamed `SkillBadge.jsx` → `Badge.jsx` since the component is now shared between Skills and Tech Stack, not skill-specific
 - No behavior change; component still takes a single `name` prop
 
 ### Feature 6 — Tech Stack (done)
@@ -134,11 +133,21 @@ Tracks what's actually built, in build order. Update after each feature.
 - Verified semantic HTML usage
 - Lint and production build pass
 
+### Feature 12 — SEO Basics (done)
+
+- Replaced default Vite page title with the real portfolio title
+- Added meta description
+- Added `og:title`
+- Added `og:description`
+- Added `og:type`
+- Verified SEO metadata directly in the browser and DevTools
+- Deferred `og:image` until a dedicated social preview asset is available
+- Deferred canonical URL until the portfolio has a real deployed URL
+
 ## Current Milestone
 
-Features 1–11 complete.
+Features 1–12 complete.
 
 Next:
 
-- Feature 12 — SEO basics
 - Feature 13 — Deployment
