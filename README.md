@@ -1,16 +1,56 @@
-# React + Vite
+# Alex John L. Tulen | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website showcasing my projects, skills, and technologies as an IT student and aspiring full-stack developer.
 
-Currently, two official plugins are available:
+## 🌐 Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[Visit my portfolio](https://portfolio-bice-gamma-22.vercel.app/)**
 
-## React Compiler
+## 🛠️ Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- Tailwind CSS v4
+- JavaScript
+- Web3Forms
+- Vercel
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Responsive single-page portfolio
+- Hero, About, Skills, Tech Stack, Projects, and Contact sections
+- Responsive navigation with mobile menu
+- Scroll-reveal animations using `IntersectionObserver`
+- Reduced-motion support with `prefers-reduced-motion`
+- Keyboard-accessible navigation
+- Visible keyboard focus states
+- Accessible contact form
+- Native form validation
+- Web3Forms contact form integration
+- SEO metadata
+- Open Graph metadata
+- Data-driven projects and skills
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── layout/
+│   │   ├── sections/
+│   │   └── ui/
+│   ├── data/
+│   ├── hooks/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── docs/
+│   ├── decisions.md
+│   └── progress.md
+├── .gitignore
+├── index.html
+├── package.json
+└── vite.config.js
+```
