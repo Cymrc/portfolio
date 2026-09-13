@@ -5,15 +5,15 @@ Tracks what's actually built, in build order. Update after each feature.
 ## Roadmap status
 
 - [x] 1. Project setup (Vite + React + Tailwind v4)
-- [ ] 2. Hero section
-- [ ] 3. About section
-- [ ] 4. Skills section
-- [ ] 5. Tech Stack section
-- [ ] 6. Projects section
-- [ ] 7. Contact section
-- [ ] 8. Navbar + Footer
-- [ ] 9. Scroll reveal animation pass
-- [ ] 10. Responsive + accessibility pass
+- [x] 2. Hero section
+- [x] 3. About section
+- [x] 4. Skills section
+- [x] 5. Tech Stack section
+- [x] 6. Projects section
+- [x] 7. Contact section
+- [x] 8. Navbar + Footer
+- [x] 9. Scroll reveal animation pass
+- [x] 10. Responsive + accessibility pass
 - [ ] 11. SEO basics
 - [ ] 12. Deploy
 
@@ -31,30 +31,33 @@ Tracks what's actually built, in build order. Update after each feature.
 - Removed default Vite/React boilerplate content and unused imports from `App.jsx`
 - Git repo initialized, `.gitignore` confirmed, first commit made: `chore: scaffold Vite+React project with Tailwind CSS v4`
 
-## Feature #2: Hero Section
+### Feature 2 — Hero Section (done)
 
 - Created responsive Hero section
 - Added CTA links
 - Added responsive typography and spacing
 - Added accessibility focus styles
 
-## Feature #3: Navbar
+### Feature 3 — Navbar (done)
 
 - Added responsive navigation
 - Added mobile menu
 - Added anchor links to sections
+- Added sticky positioning
+- Added keyboard-accessible mobile menu
+- Added focus-visible styles
 
-## Feature #4: About Section
+### Feature 4 — About Section (done)
 
 - Added About section
 - Added semantic h2 heading
 - Added responsive spacing and readable text width
 
-## Feature #5: Skills Section
+### Feature 5 — Skills Section (done)
 
 - Added data-driven skills structure
 - Added nested map rendering
-- Added reusable SkillBadge component
+- Added reusable `SkillBadge` component
 - Added responsive badge layout
 - Added proper heading hierarchy
 
@@ -66,11 +69,9 @@ Tracks what's actually built, in build order. Update after each feature.
 
 ### Feature 6 — Tech Stack (done)
 
-- Flat, uncategorized data-driven section (`data/techStack.js`)
+- Added flat, uncategorized data-driven section (`data/techStack.js`)
 - Reuses the shared `Badge` component
 - Single-level `.map()`, contrasting with Skills' nested categories
-
-- [x] 7. Projects section
 
 ### Feature 7 — Projects (done)
 
@@ -80,9 +81,7 @@ Tracks what's actually built, in build order. Update after each feature.
 - Added tech and feature list rendering
 - Added conditional GitHub and Live Demo links
 - Added secure external-link attributes
-- Added responsive card styling and layout
-
-- [x] 8. Contact section
+- Added responsive project card styling and layout
 
 ### Feature 8 — Contact (done)
 
@@ -91,14 +90,55 @@ Tracks what's actually built, in build order. Update after each feature.
 - Added secure external links
 - Added responsive flex-wrap layout
 - Reused established section/container patterns
+- Added Web3Forms contact form
+- Added loading, success, and error states
+- Added native form validation
+- Added `.env` configuration for Web3Forms
+- Added `autocomplete` attributes to form fields
+- Added `aria-live="polite"` for form status messages
 
-- [x] 9. Scroll reveal animation pass
+### Feature 9 — Navbar + Footer (done)
+
+- Added sticky responsive Navbar
+- Added mobile hamburger menu using `useState`
+- Added anchor links to all six sections
+- Added keyboard-accessible navigation and focus states
+- Added `handleLinkClick` to close the mobile menu after navigation
+- Added semantic `header` and `nav` structure
+- Added dynamic-year Footer
+- Added GitHub and LinkedIn Footer links
 
 ### Feature 10 — Scroll-reveal animations (done)
 
-- Custom `useScrollReveal` hook using IntersectionObserver, one-time reveal
-  (observer disconnects after first intersection)
-- Applied independently to all 6 sections (Hero, About, Skills, Tech Stack,
-  Projects, Contact)
-- `motion-reduce:` variants respect prefers-reduced-motion — content still
-  appears, just without the slide/fade transition
+- Added custom `useScrollReveal` hook using `IntersectionObserver`
+- Implemented one-time reveal behavior by disconnecting the observer after first intersection
+- Applied the hook independently to all 6 sections (Hero, About, Skills, Tech Stack, Projects, Contact)
+- Added fade/slide reveal transitions
+- Added `motion-reduce:` variants to respect `prefers-reduced-motion`
+
+### Feature 11 — Responsive + Accessibility audit (done)
+
+- Completed full manual responsive audit across 320px, 375px, 430px, 768px, 1024px, and 1440px+
+- Verified no horizontal overflow across tested breakpoints
+- Verified navbar breakpoint behavior
+- Verified project image proportions
+- Verified badge wrapping
+- Verified heading hierarchy and exactly one `h1`
+- Completed full-page keyboard navigation audit
+- Verified mobile hamburger keyboard interaction
+- Verified keyboard-only contact form submission
+- Verified color contrast
+- Verified image alt text and decorative `aria-hidden` content
+- Fixed missing `autocomplete` attributes on contact form fields
+- Added `aria-live="polite"` so form status changes are announced to screen readers
+- Verified semantic HTML usage
+- Lint and production build pass
+
+## Current Milestone
+
+Features 1–11 complete.
+
+Next:
+
+- Feature 12 — SEO basics
+- Feature 13 — Deployment
