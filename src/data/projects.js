@@ -37,12 +37,7 @@ export const projects = [
       "Persistent browser storage",
     ],
     github: null,
-<<<<<<< HEAD
-    demo: https://cymrc.github.io/FinStorePOS/,
-  },
-  ];
-=======
     demo: "https://cymrc.github.io/FinStorePOS/",
   },
+
 ];
->>>>>>> 8c3e60c (Add Sari-Sari Store POS project to projects data)
