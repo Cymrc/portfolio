@@ -37,6 +37,6 @@
       "Persistent browser storage",
     ],
     github: null,
-    demo: null,
+    demo: https://cymrc.github.io/FinStorePOS/,
   },
   ];
