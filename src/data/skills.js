@@ -1,47 +1,26 @@
 export const skills = [
   {
     category: "Frontend",
-    items: [
-      { name: "HTML", level: "familiar" },
-      { name: "CSS", level: "comfortable" },
-      { name: "JavaScript", level: "learning" },
-      { name: "React", level: "learning" },
-      { name: "Tailwind CSS", level: "learning" },
-    ],
+    items: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
   },
   {
     category: "Backend",
-    items: [
-      { name: "Node.js", level: "learning" },
-      { name: "Express.js", level: "learning" },
-    ],
+    items: ["PHP", "Node.js", "Express.js"],
   },
   {
     category: "Databases",
-    items: [
-      { name: "MySQL", level: "comfortable" },
-      { name: "Supabase", level: "learning" },
-    ],
+    items: ["MySQL", "Supabase"],
   },
   {
     category: "Programming",
-    items: [
-      { name: "Java", level: "comfortable" },
-      { name: "Python", level: "familiar" },
-    ],
+    items: ["Java", "Python", "JavaScript", "PHP"],
   },
   {
     category: "Mobile",
-    items: [
-      { name: "Flutter", level: "learning" },
-    ],
+    items: ["Flutter"],
   },
   {
     category: "Tools",
-    items: [
-      { name: "Git", level: "learning" },
-      { name: "GitHub", level: "familiar" },
-      { name: "VS Code", level: "comfortable" },
-    ],
+    items: ["Git", "GitHub", "Vite", "VS Code"],
   },
 ];
