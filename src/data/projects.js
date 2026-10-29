@@ -39,5 +39,23 @@ export const projects = [
     github: null,
     demo: "https://cymrc.github.io/FinStorePOS/",
   },
-
+  {
+    id: "heros-roll",
+    name: "Hero's Roll — Cozy RPG Slot Machine",
+    description:
+      "A retro arcade slot machine web app featuring a soft indie cozy RPG beach aesthetic, built with pure vanilla JavaScript.",
+    problem:
+      "Created as a mini-project to build an engaging slot machine using zero 'let' variables, relying entirely on immutable declarations and direct state object mutations.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Balanced odds engine with a 26.17% win probability",
+      "Immutable state architecture using zero 'let' keywords",
+      "Cascading flywheel friction delays for realistic reel stops",
+      "Kinematic motion blurring and scale transforms during spins",
+      "DOM-driven access locks to prevent input double-spins",
+      "Cozy RPG beach visual theme with custom CSS wave layering",
+    ],
+    github: null,
+    demo: "https://cymrc.github.io/MiniProject2---Slot-Machine/",
+  },
 ];
