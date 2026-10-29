@@ -1,5 +1,5 @@
-  export const projects = [
-    {
+export const projects = [
+  {
     id: "math-adventures",
     name: "Math Adventures",
     image: "/images/bg-kids.jpg",
@@ -20,7 +20,7 @@
     github: null,
     demo: "https://cymrc.github.io/MathForKids/",
   },
-    {
+  {
     id: "sari-sari-pos",
     name: "Sari-Sari Store POS System",
     description:
@@ -37,6 +37,12 @@
       "Persistent browser storage",
     ],
     github: null,
+<<<<<<< HEAD
     demo: https://cymrc.github.io/FinStorePOS/,
   },
   ];
+=======
+    demo: "https://cymrc.github.io/FinStorePOS/",
+  },
+];
+>>>>>>> 8c3e60c (Add Sari-Sari Store POS project to projects data)
