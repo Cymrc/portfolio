@@ -58,4 +58,24 @@ export const projects = [
     github: null,
     demo: "https://cymrc.github.io/MiniProject2---Slot-Machine/",
   },
+
+  {
+    id: "bulua-hub",
+    name: "Bulua Hub — Barangay Bulua Website",
+    description:
+      "A multi-page community information web platform and cultural archive for Barangay Bulua, the western gateway of Cagayan de Oro City.",
+    problem:
+      "Built to serve as an accessible digital directory bridging local heritage, public service processing requirements, emergency channels, and council transparency.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    features: [
+      "Multi-page architecture with semantic HTML5 structuring",
+      "Public service matrix detailing document timelines and requirements",
+      "Emergency directory for Bulua Rescue Core and Police Station 7",
+      "Interactive Google Maps geolocation embeds for key landmarks",
+      "Pure CSS accordion notice boards without external framework bloat",
+      "Responsive design with standardized cross-page footer navigation",
+    ],
+    github: null,
+    demo: "https://cymrc.github.io/MiniProject1-BarangayWebsite/",
+  },
 ];
