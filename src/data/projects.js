@@ -23,6 +23,7 @@ export const projects = [
   {
     id: "sari-sari-pos",
     name: "Sari-Sari Store POS System",
+    image: "/images/bg-pos.jpg",
     description:
       "A web-based point-of-sale system for a Filipino sari-sari store, built with HTML, CSS, and Vanilla JavaScript.",
     problem:
@@ -42,6 +43,7 @@ export const projects = [
   {
     id: "heros-roll",
     name: "Hero's Roll — Cozy RPG Slot Machine",
+    image: "/images/bg-slot-machine.jpg",
     description:
       "A retro arcade slot machine web app featuring a soft indie cozy RPG beach aesthetic, built with pure vanilla JavaScript.",
     problem:
@@ -62,6 +64,7 @@ export const projects = [
   {
     id: "bulua-hub",
     name: "Bulua Hub — Barangay Bulua Website",
+    image: "/images/bg-barangay-website.jpg",
     description:
       "A multi-page community information web platform and cultural archive for Barangay Bulua, the western gateway of Cagayan de Oro City.",
     problem:
