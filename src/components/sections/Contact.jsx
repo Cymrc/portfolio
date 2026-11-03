@@ -82,84 +82,116 @@ function Contact() {
           </a>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/80 shadow-xs"
-        >
-          <div className="flex flex-col gap-1.5">
-            <label
-              htmlFor="name"
-              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
-            >
-              Name
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              autoComplete="name"
-              required
-              placeholder="Your name"
-              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
-            />
-          </div>
+        {status === "success" ? (
+          <div className="bg-white p-8 sm:p-10 rounded-2xl border border-stone-200/80 shadow-xs text-center flex flex-col items-center gap-6">
+            <div className="h-12 w-12 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label
-              htmlFor="email"
-              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              placeholder="you@example.com"
-              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
-            />
-          </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xl font-bold tracking-tight text-stone-900">
+                Thank You!
+              </h3>
+              <p className="text-sm text-stone-600 leading-relaxed">
+                Your message has been sent successfully. I appreciate you reaching out and will get back to you as soon as possible.
+              </p>
+            </div>
 
-          <div className="flex flex-col gap-1.5">
-            <label
-              htmlFor="message"
-              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+            <button
+              onClick={() => setStatus("idle")}
+              className="inline-flex items-center justify-center w-full rounded-lg bg-stone-900 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2 cursor-pointer shadow-xs"
             >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              placeholder="Write your message here..."
-              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden resize-none"
-            />
+              Send Another Message
+            </button>
           </div>
-
-          <button
-            type="submit"
-            disabled={status === "loading"}
-            className="w-full rounded-lg bg-stone-900 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2 disabled:opacity-50 cursor-pointer shadow-xs"
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/80 shadow-xs"
           >
-            {status === "loading" ? "Sending..." : "Send Message"}
-          </button>
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="name"
+                className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+              >
+                Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                placeholder="Your name"
+                className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
+              />
+            </div>
 
-          <div aria-live="polite" className="text-center text-sm">
-            {status === "success" && (
-              <p className="text-emerald-600 font-medium">
-                Message sent successfully!
-              </p>
-            )}
-            {status === "error" && (
-              <p className="text-rose-600 font-medium">
-                Something went wrong. Try emailing me directly instead.
-              </p>
-            )}
-          </div>
-        </form>
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="email"
+                className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                placeholder="you@example.com"
+                className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
+              />
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <label
+                htmlFor="message"
+                className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                required
+                placeholder="Write your message here..."
+                className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="w-full rounded-lg bg-stone-900 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2 disabled:opacity-50 cursor-pointer shadow-xs"
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
+            </button>
+
+            <div aria-live="polite" className="text-center text-sm">
+              {status === "error" && (
+                <p className="text-rose-600 font-medium">
+                  Something went wrong. Try emailing me directly instead.
+                </p>
+              )}
+            </div>
+          </form>
+        )}
       </div>
     </section>
   );
