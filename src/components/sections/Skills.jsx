@@ -13,22 +13,34 @@ function Skills() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <div className="max-w-2xl mx-auto flex flex-col gap-8">
-        <h2 className="text-3xl font-bold text-stone-800">Skills</h2>
+      <div className="max-w-4xl mx-auto flex flex-col gap-8">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+            Skills
+          </h2>
+          <p className="text-stone-500 mt-1 text-sm">
+            Technologies and tools I work with daily.
+          </p>
+        </div>
 
-        {skills.map((categoryGroup) => (
-          <div key={categoryGroup.category}>
-            <h3 className="text-xl font-semibold text-stone-700">
-              {categoryGroup.category}
-            </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skills.map((categoryGroup) => (
+            <div
+              key={categoryGroup.category}
+              className="p-5 rounded-xl bg-white border border-stone-200/70 shadow-sm flex flex-col gap-3"
+            >
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-stone-400">
+                {categoryGroup.category}
+              </h3>
 
-            <div className="flex flex-wrap gap-2">
-              {categoryGroup.items.map((skill) => (
-                <Badge key={skill} name={skill} />
-              ))}
+              <div className="flex flex-wrap gap-2">
+                {categoryGroup.items.map((skill) => (
+                  <Badge key={skill} name={skill} />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

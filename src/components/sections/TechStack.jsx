@@ -1,5 +1,4 @@
 import { techStack } from "../../data/techStack";
-import SkillBadge from "../ui/Badge";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
 function TechStack() {
@@ -13,12 +12,21 @@ function TechStack() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <div className="max-w-2xl mx-auto flex flex-col gap-8">
-        <h2 className="text-3xl font-bold text-stone-800">Tech Stack</h2>
+      <div className="max-w-4xl mx-auto flex flex-col gap-8">
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+            Tech Stack
+          </h2>
+        </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           {techStack.map((tech) => (
-            <SkillBadge key={tech} name={tech} />
+            <div
+              key={tech}
+              className="flex items-center justify-center p-3 rounded-lg border border-stone-200/80 bg-white text-stone-700 text-xs font-semibold shadow-xs hover:border-stone-400 hover:shadow-sm transition-all duration-200"
+            >
+              {tech}
+            </div>
           ))}
         </div>
       </div>
