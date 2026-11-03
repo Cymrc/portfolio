@@ -5,23 +5,20 @@ function Contact() {
   const { ref, isVisible } = useScrollReveal();
 
   const email = "alextulen21@gmail.com";
-
   const github = "https://github.com/Cymrc";
-
   const linkedin = "https://www.linkedin.com/in/alex-john-tulen-209043360/";
 
   const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
   const [status, setStatus] = useState("idle");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     setStatus("loading");
 
     const formData = new FormData(event.target);
-
-    formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    if (WEB3FORMS_ACCESS_KEY) {
+      formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+    }
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -30,8 +27,6 @@ function Contact() {
       });
 
       const data = await response.json();
-
-      console.log(data);
 
       if (data.success) {
         setStatus("success");
@@ -53,75 +48,115 @@ function Contact() {
       }`}
     >
       <div className="max-w-2xl mx-auto flex flex-col gap-8">
-        <h2 className="text-3xl font-bold text-stone-800">Contact</h2>
+        <div>
+          <h2 className="text-3xl font-bold tracking-tight text-stone-900">
+            Contact
+          </h2>
+          <p className="text-stone-500 mt-1 text-sm">
+            Have a project in mind or want to connect? Feel free to reach out.
+          </p>
+        </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-2">
           <a
             href={`mailto:${email}`}
-            className="text-amber-700 hover:underline"
+            className="inline-flex items-center px-3.5 py-2 rounded-lg text-xs font-medium bg-white text-stone-700 border border-stone-200 shadow-xs hover:border-stone-400 transition-all duration-200"
           >
             Email
           </a>
-
           <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-700 hover:underline"
+            className="inline-flex items-center px-3.5 py-2 rounded-lg text-xs font-medium bg-white text-stone-700 border border-stone-200 shadow-xs hover:border-stone-400 transition-all duration-200"
           >
             GitHub
           </a>
-
           <a
             href={linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-amber-700 hover:underline"
+            className="inline-flex items-center px-3.5 py-2 rounded-lg text-xs font-medium bg-white text-stone-700 border border-stone-200 shadow-xs hover:border-stone-400 transition-all duration-200"
           >
             LinkedIn
           </a>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name</label>
-
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-5 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/80 shadow-xs"
+        >
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="name"
+              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+            >
+              Name
+            </label>
             <input
               id="name"
               name="name"
               type="text"
               autoComplete="name"
               required
+              placeholder="Your name"
+              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
             />
           </div>
 
-          <div>
-            <label htmlFor="email">Email</label>
-
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="email"
+              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+            >
+              Email
+            </label>
             <input
               id="email"
               name="email"
               type="email"
               autoComplete="email"
               required
+              placeholder="you@example.com"
+              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden"
             />
           </div>
 
-          <div>
-            <label htmlFor="message">Message</label>
-
-            <textarea id="message" name="message" required />
+          <div className="flex flex-col gap-1.5">
+            <label
+              htmlFor="message"
+              className="text-xs font-semibold uppercase tracking-wider text-stone-500"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              required
+              placeholder="Write your message here..."
+              className="w-full rounded-lg border border-stone-300 bg-stone-50/50 px-4 py-2.5 text-sm text-stone-800 placeholder-stone-400 transition-colors focus:border-stone-800 focus:bg-white focus:outline-hidden resize-none"
+            />
           </div>
 
-          <button type="submit" disabled={status === "loading"}>
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="w-full rounded-lg bg-stone-900 px-5 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-stone-800 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2 disabled:opacity-50 cursor-pointer shadow-xs"
+          >
             {status === "loading" ? "Sending..." : "Send Message"}
           </button>
 
-          <div aria-live="polite">
-            {status === "success" && <p>Message sent!</p>}
-
+          <div aria-live="polite" className="text-center text-sm">
+            {status === "success" && (
+              <p className="text-emerald-600 font-medium">
+                Message sent successfully!
+              </p>
+            )}
             {status === "error" && (
-              <p>Something went wrong. Try emailing me directly instead.</p>
+              <p className="text-rose-600 font-medium">
+                Something went wrong. Try emailing me directly instead.
+              </p>
             )}
           </div>
         </form>
