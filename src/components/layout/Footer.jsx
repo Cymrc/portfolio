@@ -8,7 +8,7 @@ function Footer() {
     <footer className="border-t border-stone-200/80 bg-stone-50 px-4 py-10">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-xs font-medium text-stone-500">
-          © {year} Alex John L. Tulen[cite: 11]. All rights reserved.
+          © {year} Alex John L. Tulen. All rights reserved.
         </p>
 
         <div className="flex items-center gap-3">
