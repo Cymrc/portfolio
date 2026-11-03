@@ -24,7 +24,7 @@ function Skills() {
 
             <div className="flex flex-wrap gap-2">
               {categoryGroup.items.map((skill) => (
-                <Badge key={skill.name} name={skill.name} />
+                <Badge key={skill} name={skill} />
               ))}
             </div>
           </div>

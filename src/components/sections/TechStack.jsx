@@ -18,7 +18,7 @@ function TechStack() {
 
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech) => (
-            <SkillBadge key={tech.name} name={tech.name} />
+            <SkillBadge key={tech} name={tech} />
           ))}
         </div>
       </div>
