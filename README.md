@@ -1,9 +1,8 @@
 ## Desktop View
 <img width="1576" height="900" alt="{3BE85A10-9E3A-473E-8C4D-C2167433B5F9}" src="https://github.com/user-attachments/assets/0015eb4a-c522-425b-9492-1925793d0296" />
 
-
-
-
+## Mobile View
+<img width="1170" height="2145" alt="image" src="https://github.com/user-attachments/assets/e12f959d-eb80-4455-ac90-0f6fefc2b581" />
 
 
 # Alex John L. Tulen | Portfolio
