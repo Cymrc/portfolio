@@ -30,7 +30,7 @@ function Navbar() {
           Alex John L. Tulen
         </a>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links & Resume CTA */}
         <div className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
             <a
@@ -41,6 +41,16 @@ function Navbar() {
               {link.name}
             </a>
           ))}
+
+          {/* Desktop Resume Button */}
+          <a
+            href="/Tulen_AlexJohn.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-stone-900 px-3.5 py-1.5 text-xs font-semibold text-stone-50 transition-colors duration-200 hover:bg-stone-700 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2"
+          >
+            Resume
+          </a>
         </div>
 
         {/* Mobile Toggle Button */}
@@ -71,6 +81,17 @@ function Navbar() {
                 {link.name}
               </a>
             ))}
+
+            {/* Mobile Resume Button */}
+            <a
+              href="/Tulen_AlexJohn.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLinkClick}
+              className="mt-2 block w-full rounded-lg bg-stone-900 py-2 text-center text-sm font-semibold text-stone-50 transition-colors duration-200 hover:bg-stone-700 focus-visible:outline-2 focus-visible:outline-stone-900"
+            >
+              Resume ↗
+            </a>
           </div>
         </div>
       )}
