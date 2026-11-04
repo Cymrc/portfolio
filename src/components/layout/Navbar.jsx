@@ -42,12 +42,12 @@ function Navbar() {
             </a>
           ))}
 
-          {/* Desktop Resume Button */}
+          {/* Desktop Resume Button (Amber Theme) */}
           <a
             href="/Tulen_AlexJohn.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-stone-900 px-3.5 py-1.5 text-xs font-semibold text-stone-50 transition-colors duration-200 hover:bg-stone-700 focus-visible:outline-2 focus-visible:outline-stone-900 focus-visible:outline-offset-2"
+            className="rounded-lg bg-amber-700 px-3.5 py-1.5 text-xs font-semibold text-white transition-colors duration-200 hover:bg-amber-800 focus-visible:outline-2 focus-visible:outline-amber-700 focus-visible:outline-offset-2"
           >
             Resume
           </a>
@@ -82,13 +82,13 @@ function Navbar() {
               </a>
             ))}
 
-            {/* Mobile Resume Button */}
+            {/* Mobile Resume Button (Amber Theme) */}
             <a
               href="/Tulen_AlexJohn.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLinkClick}
-              className="mt-2 block w-full rounded-lg bg-stone-900 py-2 text-center text-sm font-semibold text-stone-50 transition-colors duration-200 hover:bg-stone-700 focus-visible:outline-2 focus-visible:outline-stone-900"
+              className="mt-2 block w-full rounded-lg bg-amber-700 py-2 text-center text-sm font-semibold text-white transition-colors duration-200 hover:bg-amber-800 focus-visible:outline-2 focus-visible:outline-amber-700"
             >
               Resume ↗
             </a>
