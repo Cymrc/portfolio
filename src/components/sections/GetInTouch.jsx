@@ -42,7 +42,7 @@ function GetInTouch() {
   return (
     <section
       ref={ref}
-      id="contact"
+      id="GetInTouch"
       className={`px-4 py-20 transition-all duration-700 motion-reduce:transition-none motion-reduce:transform-none ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
