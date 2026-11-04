@@ -8,7 +8,7 @@ function Navbar() {
     { name: "Skills", href: "#skills" },
     { name: "Tech Stack", href: "#tech-stack" },
     { name: "Projects", href: "#projects" },
-    { name: "GetInTouch", href: "#GetInTouch" },
+    { name: "Get In Touch", href: "#GetInTouch" },
   ];
 
   const handleLinkClick = () => {
