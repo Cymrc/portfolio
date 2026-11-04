@@ -47,10 +47,10 @@ function Hero() {
           </a>
 
           <a
-            href="#contact"
+            href="#GetInTouch"
             className="rounded-md border border-amber-600 px-5 py-2.5 text-amber-700 transition-colors duration-200 hover:bg-amber-100 focus-visible:outline-2 focus-visible:outline-amber-700 focus-visible:outline-offset-2"
           >
-            Contact Me
+            Get In Touch
           </a>
         </div>
       </div>
