@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useScrollReveal from "../../hooks/useScrollReveal";
 
-function Contact() {
+function GetInTouch() {
   const { ref, isVisible } = useScrollReveal();
 
   const email = "alextulen21@gmail.com";
@@ -106,7 +106,8 @@ function Contact() {
                 Thank You!
               </h3>
               <p className="text-sm text-stone-600 leading-relaxed">
-                Your message has been sent successfully. I appreciate you reaching out and will get back to you as soon as possible.
+                Your message has been sent successfully. I appreciate you
+                reaching out and will get back to you as soon as possible.
               </p>
             </div>
 
@@ -197,4 +198,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default GetInTouch;

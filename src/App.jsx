@@ -5,7 +5,7 @@ import About from "./components/sections/About";
 import Skills from "./components/sections/Skills";
 import TechStack from "./components/sections/TechStack";
 import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
+import GetInTouch from "./components/sections/GetInTouch";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Skills />
         <TechStack />
         <Projects />
-        <Contact />
+        <GetInTouch />
         <Footer />
       </main>
     </>
